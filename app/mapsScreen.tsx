@@ -6,8 +6,9 @@ import * as Location from 'expo-location';
 import axios from 'axios';
 import { GooglePlacesAutocomplete } from 'react-native-google-places-autocomplete';
 import { CoordinatesContext, Coordinate } from './maps/CoordinatesContext';
+import Config from './config.js';
 
-const GOOGLE_MAPS_API_KEY = 'AIzaSyCmC1n7bbnW-oS5DDnK2p22HtVGFwvnzVM';
+const GOOGLE_MAPS_API_KEY = `${Config.GOOGLE_MAPS_API_KEY}`;
 
 const MapScreen = () => {
   const [region, setRegion] = useState({
